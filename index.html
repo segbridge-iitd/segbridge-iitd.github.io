@@ -1,7 +1,7 @@
 
 <!-- saved from url=(0037)http://cnnlocalization.csail.mit.edu/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>LDSC-IITD</title>
+<title>SegBridge-IITD</title>
 
 <script async="" src="./mall-iitd/analytics.js.download"></script><script type="text/javascript" src="./mall-iitd/jquery.mlens-1.0.min.js.download"></script>
 <script type="text/javascript" src="./mall-iitd/jquery.js.download"></script>
@@ -186,27 +186,28 @@ p code
 
 <div class="content">
 
-<h1>Domain Generalizing DINO for Visual Regression via Latent Distractor Subspace Consistency</h1>
+<h1>Continual Adaptation of Vision Foundational Models for Semantic Segmentation in Adverse Weather</h1>
 <p id="authors">
-<a href=mailto:nikhil.jangamreddy@uqidar.iitd.ac.in>Nikhil Reddy</a><sup>a,b</sup> 
-<a href="">Chetan Arora</a><sup>a </sup> 
-<a href="">Mahsa Baktashmotlagh</a><sup>b </sup> 
+<a href="mailto:nikhil.jangamreddy@uqidar.iitd.ac.in">Nikhil Kumar Jangamreddy</a><sup>1,2,3</sup>
+<a href="">Mahsa Baktashmotlagh</a><sup>2</sup>
+<a href="">Chetan Arora</a><sup>3</sup>
 <br>
 <br>
-<sup> a </sup> Indian Institute of Technology, New Delhi <br>
-<sup> b </sup> The University of Queensland, Australia.
+<sup>1</sup> UQ-IIT Delhi Research Academy (UQIDRA) <br>
+<sup>2</sup> The University of Queensland, Australia <br>
+<sup>3</sup> Indian Institute of Technology Delhi, India
 </p>
 
 <div class="downloadpaper">
 <a href="architechture.png"><img src="./architechture.png" width="400px" border="2"></a>
 </div>
 
-<p>Vision Foundation Models, such as \dino~\cite{Dinov2}, have demonstrated remarkable generalization in classification; however, their application to out-of-domain visual regression tasks remains a significant and underexplored challenge. Unlike classification, domain generalization in regression poses distinct challenges: regression produces continuous outputs and is particularly sensitive to high-variance, label-irrelevant factors (e.g., illumination, blur, or contrast). These factors can entangle with task-relevant features and induce spurious correlations. While recent regression methods~\cite{c-mixup,ranksim,circe,fds,conr} have shown promise, they often rely on CNN backbones and require the pre-specification of known distractors. This demands significant domain expertise and fails to address spurious correlations that emerge during training. To address these challenges, we propose \proposedapproach, a \textbf{L}atent \textbf{D}istractor \textbf{S}ubspace \textbf{C}onsistency framework that disentangles intermediate feature representation into task-relevant and latent distractor subspaces, and regularizes the latter under photometric perturbations to suppress spurious correlations while preserving discriminative features during training. Our proposed method, \proposedapproach, is the first to effectively adapt the powerful \dino backbone for domain generalized visual regression. \proposedapproach achieves state-of-the-art results on seven benchmark regression datasets, demonstrating its strong performance in domain generalization for visual regression with percentage improvements of (41.75\%, 20.12\%, 52.05\%, 8.27\%, 22.21\%, 3.55\%) over state-of-the-art \DG regression methods, respectively. 
+<p>We address the challenge of semantic segmentation under adverse weather and low-light conditions. Our findings show that even strong vision foundation model (VFM) baselines such as Mask2Former with a DINOv2 backbone (M2FD2), struggle under severe distribution shifts induced by extreme variations in weather and illumination. The key insight driving this work is that modern neural representations are highly sensitive to the strength and spatial distribution of color edges in images. Since each weather condition exhibits distinct boundary characteristics (e.g., sharper edges in snow, blurred edges in fog), VFMs face difficulty generalizing across such diverse domains. To overcome this, we propose Continual Test-Time Domain Adaptation (CTDA) of VFMs through a novel Boundary-Guided Query Discovery (BGQD) strategy. Our approach introduces a domain-specific prompt bank that captures and preserves the unique boundary features of each domain. During test time, BGQD leverages high-confidence edges from the input image and integrates domain-specific knowledge to dynamically transform pre-trained object queries. Experiments on four adverse-weather datasets spanning three countries and six weather conditions demonstrate the superiority of our approach. Integrating BGQD with M2FD2 yields substantial gains of 32.3%, 20.3%, 27.3%, and 23.5% over the best existing CTDA method, and 10.2%, 12.1%, 10.4%, and 14.2% over the M2FD2 baseline.
 </p>
 
 <p>
-  <a href="2312.pdf" target="_blank">Paper</a> &nbsp;|&nbsp;
-    <a href="https://openaccess.thecvf.com/content/WACV2026/supplemental/Reddy_Domain_Generalizing_DINO_WACV_2026_supplemental.pdf" target="_blank">Supplementary</a>
+    <a href="#">Paper (Coming Soon)</a> &nbsp;|&nbsp;
+    <a href="https://github.com/jnikhilreddy/SegBridge" target="_blank">Code</a>
 </p>
 
 
